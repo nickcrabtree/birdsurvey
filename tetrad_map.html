@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+	<meta name="description" content="Tetrad maps."/>
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="manifest.json">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="apple-mobile-web-app-title" content="Tetrad maps">
+	<meta name="application-name" content="Tetrad maps">
+	<meta name="msapplication-TileColor" content="#eeeeee">
+	<meta name="msapplication-TileImage" content="mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Tetrad Map</title>
+	<!-- Download OpenSpace API using your key -->
+	<script type="text/javascript" src="http://openspace.ordnancesurvey.co.uk/osmapapi/openspace.js?key=28994B5673AA6451E0530C6CA40A91A5"></script>
+	<script type="text/javascript" src="js/osMap.js"></script>
+
+	<link href="css/screen.css" type="text/css" rel="stylesheet" media="screen">
+	<link href="css/print.css" type="text/css" rel="stylesheet" media="print">
+    </head>
+    <body onload="init()">
+  	</div>
+  	<div class="tetrad">
+	    <div>
+	        <h2 id="tetrad_name"></h2>
+	    </div>
+	    <script>
+	     var arg_str = location.search.substr(1);
+	     var tetrad_str = arg_str.substr(0,5);
+	     document.getElementById("tetrad_name").innerHTML = "Tetrad: " + tetrad_str;
+	    </script>
+	    <div class="map-wrapper">
+		<form class="print-button screen">
+        	    <input type="button" value=" Print map " onclick="window.print();return false;" />
+		</form>
+		<div id="map"></div>
+		<p class="note screen">Under the terms of the OS OpenSpace licence you may print this tetrad map up to 10 times.</p>
+	    </div>
+	    <div class="print">
+	      <div id="stonechat_codes">
+	        <table>
+		    <tr>
+			<td valign="top" >
+			    <h3>Stonechat ACTIVITY RECORDING</h3>
+			    <ul style="list-style-type:none">
+				<li>Male bird singing (S)</li>
+				<li>Bird visiting probable nest site (N)</li>
+				<li>Agitated adult bird (A)</li>
+				<li>Bird carrying food (FF)</li>
+				<li>Adult bird with dependent young (FL)</li>
+				<li>Other activity suggesting breeding (please specify)</li>
+			    </ul>
+			</td>
+			<td valign="top" >
+			    <h3>Stonechat HABITAT RECORDING</h3>
+			    <ul style="list-style-type:none">
+				<li>Heather (1)</li>
+				<li>Bracken (2)</li>
+				<li>Other non-woody plants >0.5m high (3)</li>
+				<li>Short grassland (grazed) (4)</li>
+				<li>Uneven tussocky grassland (5)</li>
+				<li>Marshy grass/rushes (6)</li>
+				<li>Gorse (7)</li>
+				<li>Other shrubs <2m high (8)</li>
+				<li>Other shrubs >2m high and/or trees (9)</li>
+				<li>Arable crops (10)</li>
+				<li>Hedgerows (11)</li>
+				<li>Walls/fences (12)</li>
+				<li>Rock outcrops (13)</li>
+				<li>Other (please specify) (14)</li>
+			    </ul>
+			</td>
+		    </tr>
+		  </table>
+		  </div>
+		<div id="cetti_codes">
+		  <table>
+		    <tr>
+			<td valign="top" >
+			    <h3>Cetti's Warbler ACTIVITY RECORDING</h3>
+			    <ul style="list-style-type:none">
+				<li>Male bird singing (S)</li>
+				<li>Couldn't see the blighter (X)</li>
+				<li>Agitated adult bird (A)</li>
+				<li>Bird carrying food (FF)</li>
+				<li>Adult bird with dependent young (FL)</li>
+				<li>Other activity suggesting breeding (please specify)</li>
+			    </ul>
+			</td>
+			<td valign="top" >
+			    <h3>Cetti's Warbler HABITAT RECORDING</h3>
+			    <ul style="list-style-type:none">
+				<li>Bog (1)</li>
+				<li>Marsh (2)</li>
+				<li>Boggy marsh (3)</li>
+				<li>Marshy bog</li>
+				<li>Reed bed (5)</li>
+				<li>Marshy reed bed (6)</li>
+				<li>Boggy reed bed (7)</li>
+				<li>Reedy bog (8)</li>
+				<li>Reedy marsh (9)</li>
+				<li>Boggy marshy reedbed (10)</li>
+				<li>Marshy boggy reedbed (11)</li>
+				<li>Reedy marshy bog (12)</li>
+				<li>Reedy boggy marsh (13)</li>
+				<li>Other (please specify) (14)</li>
+			    </ul>
+			</td>
+		    </tr>
+		  </table>
+		  </div>
+		  <div id="dartford_woodlark_codes">
+		    <table>
+		    <tr>
+			<td valign="top" >
+			    <h3>Dartford Warbler and Woodlark ACTIVITY RECORDING</h3>
+			    <ul style="list-style-type:none">
+				<li>Male bird singing (S)</li>
+				<li>Skulking in a bush (W)</li>
+				<li>Agitated adult bird (A)</li>
+				<li>Bird carrying food (FF)</li>
+				<li>Adult bird with dependent young (FL)</li>
+				<li>Other activity suggesting breeding (please specify)</li>
+			    </ul>
+			</td>
+			<td valign="top" >
+			    <h3>Dartford Warbler and Woodlark HABITAT RECORDING</h3>
+			    <ul style="list-style-type:none">
+				<li>Muddy field (1)</li>
+				<li>Grassy field (2)</li>
+				<li>Vineyard (3)</li>
+				<li>Muddy vineyard (4)</li>
+				<li>Grassy vineyard (5)</li>
+				<li>Muddy grassy field (6)</li>
+				<li>Grassy muddy field (7)</li>
+				<li>Up in the sky (8)</li>
+				<li>Other (please specify) (9)</li>
+			    </ul>
+			</td>
+		    </tr>
+		  </table>
+		  </div>
+	    </div>
+	</div>
+	</div>
+	<script type="text/javascript">
+  	 var arg_str = location.search.substr(1);
+	 var survey_length = arg_str.length - 8;
+	 var survey_str = arg_str.substr(7, survey_length);
+	 document.getElementById("stonechat_codes").style.display="none";
+	 document.getElementById("cetti_codes").style.display="none";
+	 document.getElementById("dartford_woodlark_codes").style.display="none";
+	 console.log("Ran script. Survey string is ", survey_str);
+         console.log("Stonechat code display is ", document.getElementById("stonechat_codes").style.display);
+	 if (/tonechat/.test(survey_str) ) {
+	     document.getElementById("stonechat_codes").style.display="block";
+	     console.log("Turning on stonechat codes");
+	 }
+	 if (/etti/.test(survey_str) ) {
+	     document.getElementById("cetti_codes").style.display="block";
+	     console.log("Turning on cetti codes");
+	 }
+	 if (/artford/.test(survey_str) ) {
+	     document.getElementById("dartford_woodlark_codes").style.display="block";
+	     console.log("Turning on dartford codes");
+	 }
+         console.log("Stonechat code display is ", document.getElementById("stonechat_codes").style.display);
+	</script>
+    </body>
+</html>

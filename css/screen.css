@@ -1,0 +1,248 @@
+* { 
+	font: 16px Verdana, Arial, Helvetica, sans-serif;
+}
+.print { display: none; }
+body { 
+	background: #FFFFFF;
+	margin: 10px 0 40px 0;	
+}
+p, h1, h2, h3, h4, h5 {
+	color: #585858;
+}
+h1 {
+	display: inline;
+	position: absolute;
+	font-size: 2em;
+	left: 150px;
+  padding: 10px 0 0 0;
+	margin: 0;
+	width: 500px;
+}
+h2 { 
+	width: 600px;
+	font-size: 1.5em;
+	text-align: center;
+  margin: 0 0 4px 0;
+}
+h3 { 
+	width: 600px;
+	font-size: 1.25em;
+	text-align: center;
+	margin: 0 0 8px 0;
+}
+.main {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	background: #D8D2B8;
+	border: 2px solid #907F25;
+}	
+.m800 {
+	width: 800px;
+}
+.header {
+	background: #DDCC73;
+  margin: 0 0 8px 0;
+  position: relative;
+	height: 110px;
+	width: 100%;
+	border-bottom: 4px solid #907F25;
+}
+.header img {
+	display: inline;
+	width: 124px;
+	height: 110px;
+  margin: 0;
+	background: #FFFFFF;
+	border: 0;
+}
+.tetrad {
+	padding: 0 100px;
+	width: 600px;
+}
+.map-wrapper {
+	width: 600px;
+	margin: 0;
+}
+
+#map {
+	border: 1px solid #000; 
+	width: 598px; 
+	height: 598px;
+}
+#text-pane {
+	position: relative;
+  padding: 0 14px;	
+}
+#text-pane img {
+	float: right;
+	margin: 0 0 10px 10px;
+  border: 1px solid #907F25;
+  box-shadow: 0 0 2px 1px #907F25;
+}
+#text-pane ul {
+	clear: both;
+}
+#text-pane a {
+	text-decoration: underline;
+	color: #585858;
+}
+#text-pane a:hover {
+	color: #000;
+}
+#map-pane {
+  width: 930px;
+  padding: 0 14px;
+  position: relative;
+  background-color: #D8D2B8;
+}
+#map-pane img {
+	border-width: 1px;
+	border-style: solid;
+}
+div.essx {
+  height: 670px;
+}
+
+div#key {
+	position: absolute;
+	top: 0;
+	left: 746px;
+  border: 1px solid #907F25;
+  padding: 0;
+  width: 200px;
+  background-color: #EEE4AF;
+  box-shadow: 0 0 2px 1px #907F25;
+}
+div#key h5 {
+  font-size: 1.25em;
+  background-color: #DDCC73;
+  padding: 10px 0 8px 0;
+  border-bottom: 1px solid #907F25;
+  margin: 0;
+  text-align: center;
+}
+div#key img {
+  border: 1px solid #ccc;
+  margin: 0 10px 0 10px;
+  vertical-align: top;
+}
+div#key p {
+  font-size: 0.9em;
+  margin: 8px 0;
+}
+div#key span {
+	font-size: 0.75em;
+}
+div#key span {
+	font-size: 0.75em;
+}
+div#countyname {
+	color: #585858;
+	padding: 10px 0 0 10px;
+	font-size: 1.5em;
+}
+div#helptext {
+	width: 380px;
+	padding: 560px 0 0 540px;
+}
+div#helptext p {
+	font-size: 0.75em;
+}
+div#hint {
+	padding-left: 540px;
+}
+div#hint span {
+	color: #585858;
+	font-size: 0.75em;
+	border-bottom: 1px dashed #585858;
+	margin-right: 10px;
+}
+a {
+	color: #000;
+  text-decoration: none;
+}
+a:hover {
+	color: #808080;
+}
+ul {
+	width: 100%;
+	text-align: center;
+	padding: 0;
+}
+li {
+	display: inline;
+	margin: 0 20px;
+}
+li a {
+	color: #000;
+  text-decoration: none;
+	font-size: 1.5em;
+}
+li a:hover {
+	color: #808080;
+}
+.print-button {
+  margin-bottom: 10px;
+}
+.footer {
+	height: 38px;
+	background: #DDCC73;
+	margin: 12px 0 0 0;
+	border-top: 2px solid #907F25;
+}
+.footer p {
+	font-size: 0.75em;
+	padding: 0 10px;
+	margin: 10px 0 0 0;
+}
+.footer a {
+	font-size: 1em;
+	color: #585858;
+}
+.footer a:hover {
+	color: #000;
+}
+.footer-left {
+	float: left;
+}
+.footer-right {
+	float: right;
+}
+.colophon {
+	float: right;
+  padding: 2px 0 0 0;
+}
+.colophon p {
+	margin: 0;
+	color: #808080;
+	font-size: 0.625em;
+}
+.colophon a {
+	font-size: inherit;
+	color: #808080;
+	text-decoration: none;
+}
+.colophon a:hover {
+	color: #404040;
+}
+#Towns span {
+  color: #585858; 
+  background: #FFF;
+  font-size: 12px;
+  margin: 0;
+  z-index: 100;
+}
+#Towns span span {
+  padding: 1px 4px;
+  border: 1px solid #202020;
+  border-radius: 4px;
+  background: #E8E8E8;
+}
+#Towns img {
+	border: 0;
+	padding: 0 4px 0 4px;
+}
+p.note {
+	font-size: 0.875em;
+}

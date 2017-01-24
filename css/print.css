@@ -1,0 +1,80 @@
+* { font: 12px Verdana, Arial, Helvetica, sans-serif; }
+.screen { display: none; }
+.header {
+	width: 600px;
+	height: 110px;
+  margin: 0;
+  position: relative;
+}
+.header img {
+	display: inline;
+	width: 124px;
+	height: 110px;
+  margin: 0;
+	background: #FFFFFF;
+	border: 0;
+}
+h1 {
+	display: inline;
+	position: absolute;
+	font-size: 1.5em;
+	left: 150px;
+  padding: 10px 0 0 0;
+	margin: 0 0 0 -15px;
+	width: 500px;
+}
+h2 { 
+	width: 600px;
+	font-size: 1.25em;
+	text-align: center;
+  margin: 0 0 4px 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+a {
+	color: #000;
+}
+.main {
+	padding: 0;
+	margin: 0;
+	background: none;
+}	
+.map-wrapper {
+	padding: 30px 0 30px 35px;
+	margin: 0;
+}
+#map {
+	border: 1px solid #000; 
+	width: 600px; 
+	height: 600px;
+}
+
+td.label {
+	width: 44px;
+	vertical-align: bottom;
+}
+td.label2 {
+	width: 180px;
+	vertical-align: bottom;
+}
+td.input {
+	width: 250px;
+  border-bottom: 1px solid #000;
+}
+td.input2 {
+	width: 415px;
+  border-bottom: 1px solid #000;
+}
+
+.footer-left {
+  width: 300px;
+	float: left;
+}
+.footer-right {
+  width: 300px;
+	float: right;
+}
